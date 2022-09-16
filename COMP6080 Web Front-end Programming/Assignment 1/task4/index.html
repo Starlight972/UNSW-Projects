@@ -1,0 +1,71 @@
+<!-- 
+z5248104	Xin Sun
+2022.03.06	Sunday
+Assignment1 Task4
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignement Task 4</title>
+        <script type="text/javascript" src="task4.js" ></script>
+    </head>
+    <body>
+        <div class="top-part">
+            <form>
+                <table border="2">
+                    <tr>
+                        <td>First Name</td>
+                        <td>
+                            <input type="text" id="first-name" oninput="checkFirstName()" onblur="checkFirstName()" placeholder="3 to 50 characters"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>
+                            <input type="text" id="last-name" oninput="checkLastName()" onblur="checkLastName()" placeholder="3 to 50 characters"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth</td>
+                        <td>
+                            <input type="text" id="date-of-birth" oninput="checkDateOfBirth()" onblur="checkDateOfBirth()" placeholder="DD/MM/YYYY"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Favourite animal</td>
+                        <td>
+                            <select id="animals" onchange="output()">
+                                <option value="Dog" selected>Dog</option>
+                                <option value="Puppy">Puppy</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cities lived in</td>
+                        <td>
+                            <div id="cities" onclick="output()">
+                                <input type="checkbox" name="city" value="Sydney" class="city">Sydney<br>
+                                <input type="checkbox" name="city" value="Melbourne" class="city">Melbourne<br>
+                                <input type="checkbox" name="city" value="Adelaide" class="city">Adelaide<br>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="reset" id="remove" value="Remove" onclick="removeContent()">
+            </form>
+        </div>
+        <br>
+        <div class="bottom-part">
+            <form>
+                <textarea id="output" cols="50" rows="10"></textarea>
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
