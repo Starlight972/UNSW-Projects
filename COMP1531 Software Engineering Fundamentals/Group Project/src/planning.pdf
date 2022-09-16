@@ -1,0 +1,117 @@
+Interview 1
+[Requirements] Elicitation
+name: Tingting Zheng
+email:643475445@qq.com
+
+V: Hi tingting! How are you!
+T: all good!
+V: you know, unsw decide to build a new product called flockr and our team is building the backend part for this product. After nearly
+   10 weeeks' work, the flockr is almost finished. You are the lucky dog to experience in advance!
+T: oh, really? I am happy to do that.
+V: cool, here is the web link and you can register any time you like!
+(after few days)
+V: hey so how's it going?
+T: well, it is a fantastic experience.
+V: that's good! So you like it, do you?
+T: of course! 
+V: so did you use a teamwork-driven communication tool like flockr before?
+T: yea, I think DingDing is similar to flockr.
+V: ok that's great, compared with Dingding, is there any features flockr does not have but dingding does?
+T: let me have a think......well actually there exists one
+V: what is that?
+T: well in dingding, when two people wanna say something private rather than in a channel, they can add friends and start a private text box.
+   but when I was using flockr, I did not find this function.
+V: oh yea! you are right, we do need to add a making friend feature, it is important! thx a lot for this valuable advice!!!
+T: no worries, it is so glad to help you.
+V: our team member will implement it asap, once it finished, I will invite you to experience again!
+T: that's great!
+
+[Requirements] Analysis & Specification - Use Cases
+User Story:
+as an user, I want to add friends with other users in a channel so that I can talk to them privately.
+
+User Acceptance Criteria:
+1.there will be a 'add friend' button in each user's profile page
+2.if user A want to add friend with user B, after user B agree A's request, they will be friends
+3.if 2 users are already friends, the 'add friend' button will change to 'send message" button
+
+[Requirements] Validation
+Comments from tingting after seeing User Acceptance Criteria:
+your group totally describe the problem I made, and I'm looking forward for the real feature appear in flockr web.
+
+[Design] Interface Design
+Function name: /user/add/friend
+Http method: POST        
+Parameters: (token, u_id, channel_id)    
+Return Type:{}        
+Exceptions: --Input Error: *invalid token    *invalid u_id      *invalid channel_id
+            --Access Error: *they are already friends   *two users are not in a same channel
+Description: a user can add friend with anthor user in the channel which they are both in.
+
+
+
+
+
+
+Interview 2
+[Requirements] Elicitation
+name: Donny
+
+
+R: Hi Donny! What’ up?
+D: I am busy preparing for my exam, but everything is good. What about you?
+R: Me too, I am busy doing assignments cause you know, trimester in UNSW. Now, are you willing to give me 10 mins, I want to take an interview with you, it is related my assignment. 
+D: Sure, what things do you want to ask me?
+R: For my COMP1531 project Flockr, it let us implement some functions so that users can use it to chat with friends, you can considered as a chatting software. The code is almost done by my teammates and me, and I want you to experience it and give me some suggestions to let us improve it.
+D: Oh, really? It’s so cool, I am happy to do that.
+R: Right, here is the web link and you can experience it.
+(after half an hour)
+D: Well, I have experienced all features I can, it is a fantastic.
+R: That’s good! So you like it, do you?
+D: Not really. Compared with other APPs such as WeChat and Facebook, there are many features Flockr does not have but other does.
+R: Yes, we know, that’s why you suggestions are important. Can you give me examples?
+D: OK, for example, in Flockr, when I want to add strangers as friends, it’ hard, cause I don’t know their ID. However, in WeChat, I can. I can add some strangers through people nearby feature.
+R: You are right, so we can add people nearby feature to let user add friends randomly. It’ a good idea! What about others?
+D: Another thing I think is message send feature. Sometimes, I am driving and I can’t do typing. So voice send or voice transfer could be important.
+R: Yes, I mean you idea, this is important feature we need to have. I will discuss with my teammates later and try to achieve them. Once it finished, I will invite you to experience again!
+D: That's great!
+
+[Requirements] Analysis & Specification - Use Cases
+User Story:
+1.As a user, I want to find who are nearby so that I can add them as friends without knowing their ID.
+2.As a driver, I want to send a voice message so that I can drive safely.
+
+1. User Acceptance Criteria:
+   There will be a ‘people nearby' button in user profile page.
+   If user click this Botton, a list of users’ ID with 1km will be shown.
+
+
+2. Driver Acceptance Criteria:
+   There will be a ‘shift' button closed to ‘send message’ Botton.
+   If driver click this Botton, message send shift to voice send.
+
+
+[Requirements] Validation
+Comments from Donny after seeing User and Driver Acceptance Criteria:
+Your group totally clarify the problem I made, and I'm looking forward for the real features appear in Flockr web.
+
+1. 	[Design] Interface Design
+	Function name: / user/find/nearby
+	Http method: POST        
+	Parameters: (token, location)    
+	Return Type:{}        
+
+	Exceptions: --Input Error: *invalid token  
+	Description: A user can find nearby strangers
+
+2.	[Design] Interface Design
+	Function name: / message/voice/send
+	Http method: POST        
+	Parameters: (token, channel_id, voice)    
+	Return Type:{}     
+   
+	Exceptions: --Input Error: *invalid token  *invalid channel_id  *too long voice
+		        —Access Error: token is not a member of that channel_id
+	Description: user can send voice in the channel they joined.
+
+
