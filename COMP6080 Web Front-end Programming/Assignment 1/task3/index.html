@@ -1,0 +1,191 @@
+<!-- 
+z5248104	Xin Sun
+2022.03.06	Sunday
+Assignment1 Task3
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheets.css">
+        <title>Assignement Task 3</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="switch">
+                <span>Monthly</span>
+                <input type="checkbox" class="toggle">
+                <span>Annually</span>
+            </div>
+            <div class = "tabContainer">
+                <div class = "buttonContainer">
+                    <button onclick="showPanel(0)">BACHELOR</button>
+                    <button onclick="showPanel(1)">MASTERS</button>
+                    <button onclick="showPanel(2)">DOCTORATE</button>
+                </div>
+                <div class = "tabPanel">
+                    <div class="title">Bachelor</div>
+                    <div class="article">Get the basic tools you need to tackle most industries</div>
+                    <div class="starting-at">Stating at</div>
+                    <div class="price"><p id="dollor-symbol">$</p><p id="larger-number">0</p><p id="per-month">/mo.</p></div>
+                    <div class="load-and-faculty-text">Choose your load and faculty</div>
+                    <div class="selectbox">
+                        <select name="load-and-faculty">
+                            <option value="Full time, Engineering" selected>
+                                Full time, Engineering
+                            </option>
+                            <option value="Part time, Engineering">
+                                Part time, Engineering
+                            </option>
+                            <option value="Full time, Science">
+                                Full time, Science
+                            </option>
+                            <option value="Part time, Science">
+                                Part time, Science
+                            </option>
+                        </select>
+                    </div>
+                    <div class="text">Includes:</div>
+                    <div class="text-list">
+                        <p><img src="assets/tick.svg"/> Up to 3 UNSW courses</p>
+                        <p><img src="assets/tick.svg"/> Hosted in the cloud</p>
+                    </div>
+                    <div class="free-trial-button-box">
+                        <button class="free-trial-button">START FREE TRIAL</button>
+                    </div>
+                </div>
+                <div class = "tabPanel">
+                    <div class="title">Masters</div>
+                    <div class="article">Enhance your base knowledge and put yourself ahead of the rest</div>
+                    <div class="starting-at">Stating at</div>
+                    <div class="price"><p id="dollor-symbol">$</p><p id="larger-number">19</p><p id="per-month">/mo.</p></div>
+                    <div class="load-and-faculty-text">Choose your load and faculty</div>
+                    <div class="selectbox">
+                        <select name="load-and-faculty">
+                            <option value="Full time, Engineering" selected>
+                                Full time, Engineering
+                            </option>
+                            <option value="Part time, Engineering">
+                                Part time, Engineering
+                            </option>
+                            <option value="Full time, Science">
+                                Full time, Science
+                            </option>
+                            <option value="Part time, Science">
+                                Part time, Science
+                            </option>
+                        </select>
+                    </div>
+                    <div class="text">Everything in Bachelor, <span style="font-weight: bold; color: #39c2d9;">plus:</span></div>
+                    <div class="text-list">
+                        <p><img src="assets/tick.svg"/> Get access to further courses unavailable to Bacehlorss</p>
+                        <p><img src="assets/tick.svg"/> Opportunities for upper tier students to do focused research</p>
+                    </div>
+                    <div class="free-trial-button-box">
+                        <button class="free-trial-button">START FREE TRIAL</button>
+                    </div>
+                </div>
+                <div class = "tabPanel">
+                    <div class="title">Doctorate</div>
+                    <div class="article">Complete deep research to completely standout in a unique way</div>
+                    <div class="contact">Contact us to learn more about scholarships and other information</div>
+                    <div class="doctorate-text">Everything in Masters, <span style="font-weight: bold; color: #39c2d9;">plus:</span></div>
+                    <div class="text-list">
+                        <p><img src="assets/tick.svg"/> You can get to call yourself "Doctor!"</p>
+                        <p><img src="assets/tick.svg"/> Enjoy the thrilling experience of trying to get published</p>
+                        <p><img src="assets/tick.svg"/> Free 10 word unique thesis title generated for you</p>
+                    </div>
+                    <div class="free-trial-button-box" style="padding-top: 180px;">
+                        <button class="free-trial-button">CONTACT US</button>
+                    </div>
+                </div>   
+            </div>
+            <div class="larger-screen-container">
+                <div class="bachelor">
+                    <div class="title-bachelor">Bachelor</div>
+                    <div class="article-bachelor">Get the basic tools you need to tackle most industries</div>
+                    <div class="starting-at-bachelor">Stating at</div>
+                    <div class="price"><p id="dollor-symbol-bachelor">$</p><p id="larger-number-bachelor">0</p><p id="per-month-bachelor">/mo.</p></div>
+                    <div class="load-and-faculty-text">Choose your load and faculty</div>
+                    <div class="selectbox">
+                        <select name="" class="select-bachelor">
+                            <option value="Full time, Engineering" selected>
+                                Full time, Engineering
+                            </option>
+                            <option value="Part time, Engineering">
+                                Part time, Engineering
+                            </option>
+                            <option value="Full time, Science">
+                                Full time, Science
+                            </option>
+                            <option value="Part time, Science">
+                                Part time, Science
+                            </option>
+                        </select>
+                    </div>
+                    <div class="text">Includes:</div>
+                    <div class="text-list">
+                        <p><img src="assets/tick.svg"/> Up to 3 UNSW courses</p>
+                        <p><img src="assets/tick.svg"/> Hosted in the cloud</p>
+                    </div>
+                    <div class="free-trial-button-box-bachelor">
+                        <button class="free-trial-button-bachelor">START FREE TRIAL</button>
+                    </div>
+                </div>
+                <div class="masters-and-doctorate">
+                    <div class="masters">
+                        <div class="title-masters-and-doctorate">Masters</div>
+                        <div class="article-masters-and-doctorate">Enhance your base knowledge and put yourself ahead of the rest</div>
+                        <div class="starting-at-masters-and-doctorate">Stating at</div>
+                        <div class="price"><p id="dollor-symbol-masters-and-doctorate">$</p><p id="larger-number-masters-and-doctorate">19</p><p id="per-month-masters-and-doctorate">/mo.</p></div>
+                        <div class="load-and-faculty-text">Choose your load and faculty</div>
+                        <div class="selectbox">
+                            <select name="load-and-faculty" class="select-masters-and-doctorate">
+                                <option value="Full time, Engineering" selected>
+                                    Full time, Engineering
+                                </option>
+                                <option value="Part time, Engineering">
+                                    Part time, Engineering
+                                </option>
+                                <option value="Full time, Science">
+                                    Full time, Science
+                                </option>
+                                <option value="Part time, Science">
+                                    Part time, Science
+                                </option>
+                            </select>
+                        </div>
+                        <div class="text">Everything in Bachelor, <span style="font-weight: bold; color: #39c2d9;">plus:</span></div>
+                        <div class="text-list">
+                            <p><img src="assets/tick.svg"/> Get access to further courses unavailable to Bacehlorss</p>
+                            <p><img src="assets/tick.svg"/> Opportunities for upper tier students to do focused research</p>
+                        </div>
+                        <div class="free-trial-button-box-masters">
+                            <button class="free-trial-button-masters">START FREE TRIAL</button>
+                        </div>
+                    </div>
+                    <div class="doctorate">
+                        <div class="title-masters-and-doctorate">Doctorate</div>
+                        <div class="article-masters-and-doctorate">Complete deep research to completely standout in a unique way</div>
+                        <div class="contact">Contact us to learn more about scholarships and other information</div>
+                        <div class="doctorate-text">Everything in Masters, <span style="font-weight: bold; color: #39c2d9;">plus:</span></div>
+                        <div class="text-list">
+                            <p><img src="assets/tick.svg"/> You can get to call yourself "Doctor!"</p>
+                            <p><img src="assets/tick.svg"/> Enjoy the thrilling experience of trying to get published</p>
+                            <p><img src="assets/tick.svg"/> Free 10 word unique thesis title generated for you</p>
+                        </div>
+                        <div class="free-trial-button-box-masters" style="padding-top: 180px;">
+                            <button class="free-trial-button-masters">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer">
+                <span> > See All Features</span>
+                <span>|</span>     
+                <span>> View FAQ </span>
+            </div>
+            <script src="tabChange.js"></script>
+        </div>
+    </body>
+</html>
