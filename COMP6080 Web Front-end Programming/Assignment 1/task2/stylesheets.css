@@ -1,0 +1,232 @@
+/** 
+z5248104	Xin Sun
+2022.02.29	Monday
+Assignment1 Task2
+**/
+
+
+* {
+    font-family: "Arial";
+}
+
+@media screen and (max-width: 3200px) {
+    .container {
+        width: 1200px;
+        height: 1289px;
+    }
+
+    #top-part {
+        height: 68%;
+        width: 100%;
+        background-color: #316e74;
+    }
+
+    #bottom-part {
+        width: 100%;
+        height: 32%;
+        margin: auto;
+        background-color: #315074;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 27pt;
+        font-weight: bold;
+        padding-top: 40px;
+        margin: auto;
+        color: white;
+    }
+
+    #article{
+        text-align: center;
+        font-size: 15.5pt;
+        width: 645px;
+        height: 65px;
+        margin-left: 280px;
+        margin-right: 280px;
+        padding-top: 40px;
+        color: #e0e9ea;
+        line-height: 35px;
+    }
+
+
+    #four-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #postion-center {
+        display: flex;
+        width: 470px;
+        justify-content: center;
+    }
+
+    #icon-top {
+        width: 85px;
+        height: 85px;
+        margin: 30px;
+        padding-top: 30px;
+    }
+
+    #balancethingsnow {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    a {
+        font-size: 16pt;
+        color: white;
+    }
+
+    #three-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #box {
+        width: 365px;
+        margin: 50px;
+    }
+
+    #icon-bottom {
+        width: 110px;
+        height: 110px;
+        margin: 0 110px 10px 110px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 20pt;
+        font-weight: bold;
+        margin: auto;
+        color: white;
+    }
+
+    .details {
+        text-align: center;
+        font-size: 14pt;
+        margin-left: 25px;
+        margin-right: 25px;
+        line-height: 35px;
+        color: white;
+        margin-bottom: none;
+    }
+
+    #readmore {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 857px;
+        height: 1289px;
+    }
+
+    #top-part {
+        height: 68%;
+        width: 100%;
+        background-color: #316e74;
+    }
+
+    #bottom-part {
+        width: 100%;
+        height: 32%;
+        margin: auto;
+        background-color: #315074;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 27pt;
+        font-weight: bold;
+        padding-top: 40px;
+        margin: auto;
+        color: white;
+        line-height: 35px;
+    }
+
+    #article{
+        text-align: center;
+        font-size: 15.5pt;
+        width: 645px;
+        height: 65px;
+        margin: auto;
+        padding-top: 40px;
+        color: #e0e9ea;
+    }
+
+
+    #four-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #postion-center {
+        display: flex;
+        width: 470px;
+        justify-content: center;
+    }
+
+    #icon-top {
+        width: 85px;
+        height: 85px;
+        margin: 30px;
+        padding-top: 30px;
+    }
+
+    #balancethingsnow {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    a {
+        font-size: 16pt;
+        color: #e0e9ea;
+    }
+
+    #three-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #box {
+        width: 250px;
+        margin: 30px;
+
+    }
+
+    #icon-bottom {
+        width: 100px;
+        height: 100px;
+        margin: 0 75px 10px 75px;
+        justify-content: center;
+        
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 20pt;
+        font-weight: bold;
+        padding-top: 10px;
+        color: white;
+    }
+
+    .details {
+        text-align: center;
+        font-size: 13.2pt;
+        margin-left: 20px;
+        margin-right: 20px;
+        line-height: 35px;
+        color: #e0e9ea;
+        margin-bottom: none;
+    }
+
+    #readmore {
+        text-align: center;
+    }
+}
