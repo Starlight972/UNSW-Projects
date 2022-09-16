@@ -1,0 +1,656 @@
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+header {
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    height: 10%;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+main {
+    background-color: #ffebcd;
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+    overflow: auto;
+} 
+
+footer {
+    background-color: #dfbe8e;
+    position: absolute;
+    height: 5%;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+}
+
+#web-title {
+    flex: 4;
+    margin: 2%;
+}
+
+#header-button-container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#profile-btn, #profile-leave-btn, #logout-btn, #be-watchee-btn {
+    display: none;
+}
+
+#btn-profile, #btn-profile-leave {
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid darkblue;
+    background-color: darkblue;
+    border-radius: 10px;
+    color: #fff;
+    flex: 1; 
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+}
+
+#btn-logout, #btn-be-watchee {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid darkblue;
+    background-color: darkblue;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    top: 0;
+    bottom: 0;
+    right: 80px;
+    margin: auto;
+    text-align: center;
+}
+
+#btn-profile:hover, #btn-profile-leave:hover, #btn-logout:hover, #btn-be-watchee:hover {
+    background-color: rgb(16, 16, 83);
+}
+
+#login-screen,#register-screen, #feed-screen, #user-info-update-screen, #job-add-screen, #job-update-screen {
+    width: 90%;
+    height: auto;  
+    border: 3px solid #fff; 
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(215, 232, 247);
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+
+#feed-screen {
+    background-color: #ffebcd;
+    border: none;
+}
+
+#input-container {
+    padding-top:20px;
+}
+
+#input-email, #input-password, #input-name, #input-password-confirm, #input-image, #input-job-title, #input-job-image, #input-job-start, #input-job-description, #new-job-title-input, #new-job-pic, #new-job-start-time, #new-job-description {
+    width: 80%; 
+    height: 10%; 
+    margin: auto; 
+    border: 1px solid #fff; 
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+label {
+    float: left; 
+    margin-left: 2%;
+    margin-top: 2%;
+    color: rgb(85, 81, 81);  
+}
+
+input {
+    width: 96%; 
+    height: 30px; 
+    border: none; 
+    margin: auto; 
+    padding-left: 2%; 
+    padding-right: 2%;
+    border-radius: 5px;
+}
+
+#btn-container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-login, #btn-register, #btn-save, #btn-job-add, #btn-job-update{
+    margin: auto;
+    margin-top: 20px; 
+    width: 80%;
+    height: 50px;
+    border: 1px solid lightblue;
+    border-radius: 15px;
+    color: #333;
+    background-color: lightblue;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#btn-login:hover, #btn-register:hover, #btn-save:hover, #btn-job-add:hover, #btn-job-update:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+#btn-goto-login, #btn-goto-register, #btn-cancel, #btn-job-add-cancel, #btn-job-update-cancel {
+    padding-top: 0; 
+    margin-top: 0; 
+    border: none; 
+    background-color: inherit; 
+    color: rgb(3, 167, 3);
+    text-decoration: underline;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#btn-cancel, #btn-job-add-cancel, #btn-job-update-cancel {
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 80%;
+    border-radius: 15px;
+    background-color: red;
+    color: #fff;
+}
+
+#btn-goto-login:hover, #btn-goto-register:hover, #btn-cancel:hover, #btn-job-add-cancel:hover, #btn-job-update-cancel:hover {
+    color: darkred;
+}
+
+#error-popup, #be-watchee-popup  {
+	display: none;
+    position: fixed;
+	background-color: lightgray;
+	align-self: center;
+	flex-direction: column;
+	padding: 4px;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+    top: 20px;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    color: red;
+}
+
+#errorClose, #be-watchee-add, #be-watchee-close{
+    background-color: grey;
+    color: #fff;
+    font-weight: bold;
+    margin:5px;
+}
+
+#errorClose:hover, #be-watchee-close:hover {
+    background-color: red;
+}
+
+#be-watchee-add:hover {
+    background-color: rgb(11, 121, 38);
+}
+
+#jobCard {
+    margin: auto;
+    width: 100%;
+    border: 1px solid #fff;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: inherit;
+    height: auto;
+    padding-top: 20px;
+    background-color: rgb(215, 232, 247);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.leftPart {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rightPart {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+#picInfo{
+    width: 60px;
+    height: auto;
+    border-radius: 30px;
+    align-items: center;
+}
+
+#author{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+#author:hover {
+    color: blue;
+}
+
+.likeControlPart {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Like, .Dislike{
+    width: 90%;
+    margin: 5px;
+    padding: auto;
+    font-weight: bold;
+    color: #fff;
+}
+
+.Like {
+    background-color: red;
+}
+
+.Like:hover {
+    background-color: rgb(99, 14, 14);
+}
+
+.Dislike {
+    background-color: green;
+}
+
+.Dislike:hover {
+    background-color: rgb(25, 66, 25);
+}
+
+.postTime{
+    color: darkgray;
+}
+.jobDescription{
+    line-height: 30px;
+}
+.startTime{
+    text-decoration: underline;
+}
+
+.showAmount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    flex-wrap: wrap;
+}
+
+.likeText, .commnetsText {
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.commentsSend {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: auto;
+    justify-content: center;
+}
+
+.commentsInput{
+    width: 80%;
+    margin: 2px;
+}
+
+.sendComments {
+    width: 20%;
+    margin: 2px;
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.sendComments:hover {
+    background-color: rgb(17, 14, 14);
+}
+
+.showLike, .showCommnets, .hideLike, .hideComments {
+    width: 70%;
+    margin: 5px;
+    float: left;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.showLike, .hideLike {
+    background-color: inherit;
+    color: red;
+    border: 1px solid red;
+}
+
+.showLike:hover, .hideLike:hover {
+    color: rgb(99, 14, 14);
+    border: 1px solid rgb(99, 14, 14);
+}
+
+.showCommnets, .hideComments {
+    background-color: inherit;
+    color: green;
+    border: 1px solid green;
+}
+
+.showCommnets:hover, .hideComments:hover {
+    color: rgb(25, 66, 25);
+    border: 1px solid rgb(25, 66, 25);
+}
+
+.commentSpace, .likedSpace {
+    width: 90%;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.commentInfo, .likesInfo {
+    width: 90%;
+    border-bottom: 1px solid #333;
+    margin: 5px;
+    padding: 5px;
+    line-height: 30px;
+}
+
+.commentInfo:hover, .likesInfo:hover {
+    color: blue;
+}
+
+
+@media screen and (max-width: 800px) {
+    .seeAllDetails {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .seeAllDetails {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+#profile-screen {
+    width: 90%;
+    height: auto;  
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background-color: rgb(215, 232, 247);
+    margin: auto;
+    margin-top: 50px;
+}
+
+#user-detail {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#user-image {
+    width: 100px;
+    height: 100px;
+    left: 5px;
+    top:10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#user-name {
+    height: 30px;
+    top: 10px;
+    left: 110px;
+    right: 60px;
+    position: absolute;
+}
+
+#user-email {
+    height: 30px;
+    left: 110px;
+    top: 50px;
+    right: 60px;
+    position: absolute;
+}
+
+#user-follow, #user-detail-edit, #user-unfollow {
+    height: 50px;
+    width: 100px;
+    top: 115px;
+    left: 5px;
+    position: absolute;
+}
+
+#user-add-job {
+    height: 50px;
+    width: 100px;
+    top: 170px;
+    left: 5px;
+    position: absolute;
+}
+
+#job-list {
+    position: absolute;
+    left: 110px;
+    top: 90px;
+    right: 60px;
+    background-color: white;
+    height: auto;
+    bottom: 5px;
+    overflow: auto;
+    margin-top: 5px;
+}
+
+#followed-users-amount {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+#followed-detail {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    right: 5px;
+    bottom: 5px;
+}
+
+#watched-users {
+    position: absolute;
+    top:35px;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#user-image-info{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-name-info, #user-email-info{
+    color: #333;
+    font-weight: bold;
+}
+
+#watch-user, #edit-info, #add-job, #unwatch-user{
+    width: 90%;
+    height: 70%;
+    margin: 5%;
+    margin-top: 7%;
+    border-radius: 10px;
+    background-color: brown;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+#add-job {
+    background-color: rgb(144, 144, 250);
+}
+
+#watch-user:hover, #edit-info:hover, #add-job:hover {
+    background-color: rgb(61, 20, 20);
+}
+
+#watch-count{
+    color: blue; 
+    font-size: 15px; 
+    font-weight: bold; 
+    float: right; 
+    margin-top: 0; 
+    margin-right: 10px;
+}
+
+#jobContainer {
+    width: 90%;
+    height: auto;
+    border: 2px solid #333;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+#titleCard, #startCard, #postCard, #descriptionCard, #commentsCard, #likesCard, #editJobButton, #deleteJobButton{
+    margin: 5px;
+}
+
+#postCard {
+    color: gray;
+}
+
+#startCard {
+    margin-top: 10px;
+}
+
+#imgCard{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+#descriptionCard {
+    font-family:'Arial Narrow';
+}
+
+#editJobButton, #deleteJobButton{
+    width: 150px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#editJobButton:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#deleteJobButton:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.namePut {
+    background-color: #fff;
+    font-size: 10px;
+    width: 100%;
+    margin: 1px;
+    border-bottom: 2px solid #333;
+    padding: 2px;
+}
+
+.namePut:hover {
+    color: blue;
+}

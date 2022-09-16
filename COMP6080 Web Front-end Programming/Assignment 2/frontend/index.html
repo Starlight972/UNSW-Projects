@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+</head>
+<body>
+    <!-- This is an example app structure, you can modify this as much as you choose --> 
+    <header>
+        <div class="header-container">
+            <div id="web-title"><h1>lurkforwork.com</h1></div>
+            <div id="header-button-container">
+                <div id="profile-btn"><button id="btn-profile">My Proflie</button></div>
+                <div id="profile-leave-btn"><button id="btn-profile-leave">Leave</button></div>
+                <div id="logout-btn"><button id="btn-logout">Logout</button></div>
+                <div id="be-watchee-btn"><button id="btn-be-watchee">Be Watchee</button></div>
+            </div>
+        </div>   
+    </header>
+    <main role="main">
+        <!-- app goes here -->
+        <div class="main-container">
+            <!-- Login Screen -->        
+            <div id = "login-screen">
+                <div><h1>Login</h1></div>
+                <div id="input-container">
+                    <div id="input-email">
+                        <label>Email:</label>
+                        <input id = "login-email" placeholder="name@example.com" value="sunxin@email.com" type="text" />
+                    </div>
+                    <div id="input-password">
+                        <label>Password:</label>
+                        <input id = "login-password" placeholder="xxxxxxxxxxx" value="sunxin" type="password" />
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button id = "btn-login">Login</button>
+                    <button id = "btn-goto-register">Join us ?</button>
+                </div>
+            </div>
+            <!-- Register Screen -->
+            <div id = "register-screen" style ="display: none;">
+                <h1>Register</h1>
+                <div id="input-container">
+                    <div id="input-email">
+                        <label>Email:</label>
+                        <input id = "register-email" placeholder="name@example.com" type="text" />
+                    </div>
+                    <div id="input-name">
+                        <label>Name:</label>
+                        <input id = "register-name" placeholder="name" type="text" />
+                    </div>
+                    <div id="input-password">
+                        <label>Password:</label>
+                        <input id = "register-password" placeholder="xxxxxxxxxxx" type="password" />
+                    </div>
+                    <div id="input-password-confirm">
+                        <label>Confirm Password:</label>
+                        <input id = "register-password-confirm" placeholder="xxxxxxxxxxx" type="password" />
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button id = "btn-register">Sign up</button>
+                    <button id = "btn-goto-login">Already have an account ?</button>
+                </div>
+            </div>
+            <!-- Error Popup-->
+            <div id="error-popup">
+                <p id="error-message"></p>
+                <input type="button" id="errorClose" value="Close">
+            </div>
+            <!-- Be Watchee Popup-->
+            <div id="be-watchee-popup">
+                <h3>Input user's email you want to watch</h3>
+                <input type="text" id="email-input-to-be-watchee" placeholder="name@example.com">
+                <input type="button" id="be-watchee-add" value="Add">
+                <input type="button" id="be-watchee-close" value="Close">
+            </div>
+            <!-- Job List Screen -->        
+            <div id = "feed-screen" style ="display: none;"></div>
+            <!-- Profile Screen -->        
+            <div id = "profile-screen" style ="display: none;">
+                <div id="user-detail">
+                    <div id="user-image"><img id="user-image-info" /></div>
+                    <div id="user-name"><a style="color: gray; font-size: 15px;">Name:<span id="user-name-info"></span></a></div>
+                    <div id="user-email"><a style="color: gray; font-size: 15px;">Email:<span id="user-email-info"></span></a></div>
+                    <div id="user-follow" ><input type="button" id="watch-user" value="Watch"></div>
+                    <div id="user-unfollow" style="display: none;"><input type="button" id="unwatch-user" value="Unwatch"></div>
+                    <div id="user-detail-edit" style="display: none;" ><input type="button" id="edit-info" value="Edit Info"></div>
+                    <div id="user-add-job" style="display: none;" ><input type="button" id="add-job" value="Add A Job"></div>
+                    <div id="job-list"></div>
+                    <div id="followed-users-amount"><p style="color: gray; font-size: 10px;">Watchs No.:<p id="watch-count"></p></div>
+                    <div id="followed-detail">
+                        <div style="font-size: 10px; width: 100%; position: absolute; height: 30px; top: 0; left: 0; right: 0;">Show Users:</div>
+                        <div id="watched-users"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- User Info Update Screen -->
+            <div id = "user-info-update-screen" style ="display: none;"> 
+                <h1>Info Update</h1>
+                <div id="input-container">
+                    <div id="input-email">
+                        <label>New Email:</label>
+                        <input id = "update-email" placeholder="name@example.com" type="text" />
+                    </div>
+                    <div id="input-name">
+                        <label>New Name:</label>
+                        <input id = "update-name" placeholder="name" type="text" />
+                    </div>
+                    <div id="input-password">
+                        <label>New Password:</label>
+                        <input id = "update-password" placeholder="xxxxxxxxxxx" type="password" />
+                    </div>
+                    <div id="input-image">
+                        <label>New Image:</label>
+                        <input type="file" id="new-pic" accept="image/*">
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button id = "btn-save">Save</button>
+                    <button id = "btn-cancel">Cancel</button>
+                </div>
+            </div>
+            <!-- Job Add Screen -->
+            <div id="job-add-screen" style ="display: none;">
+                <h1>Add a job</h1>
+                <div id="input-container">
+                    <div id="input-job-title">
+                        <label>Job Title:</label>
+                        <input id = "job-title-input"  type="text" />
+                    </div>
+                    <div id="input-job-image">
+                        <label>Job Image:</label>
+                        <input type="file" id="job-pic" accept="image/*" >
+                    </div>
+                    <div id="input-job-start">
+                        <label>Start Time:</label>
+                        <input id = "job-start-time" type="datetime-local" />
+                    </div>
+                    <div id="input-job-description">
+                        <label>Job description:</label>
+                        <input type="text" id="job-description" />
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button id = "btn-job-add">Add</button>
+                    <button id = "btn-job-add-cancel">Cancel</button>
+                </div>
+            </div>
+
+            <!-- Job Update Screen -->
+            <div id="job-update-screen" style ="display: none;">
+                <h1>Add a job</h1>
+                <div id="input-container">
+                    <div id="input-job-title">
+                        <label>New Job Title:</label>
+                        <input id = "new-job-title-input"  type="text" />
+                    </div>
+                    <div id="input-job-image">
+                        <label>New Job Image:</label>
+                        <input type="file" id="new-job-pic" accept="image/*" >
+                    </div>
+                    <div id="input-job-start">
+                        <label>New Start Time:</label>
+                        <input id = "new-job-start-time" type="datetime-local" />
+                    </div>
+                    <div id="input-job-description">
+                        <label>New Job description:</label>
+                        <input type="text" id="new-job-description" />
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button id = "btn-job-update">Update</button>
+                    <button id = "btn-job-update-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            &copy; lurkforwork.com 2022
+        </div>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
