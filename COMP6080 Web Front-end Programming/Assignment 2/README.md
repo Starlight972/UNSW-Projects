@@ -1,4 +1,4 @@
-# Assessment 2 - Vanilla JS: LurkForWork (DRAFT)
+# Assessment 2 - Vanilla JS: LurkForWork
 
 1. Background & Motivation
 2. The Task
