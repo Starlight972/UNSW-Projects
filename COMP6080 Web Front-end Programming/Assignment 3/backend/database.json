@@ -1,0 +1,170 @@
+{
+  "admins": {
+    "hayden@email.com": {
+      "name": "Hayden",
+      "password": "hayden",
+      "sessionActive": true
+    },
+    "hayden@example.com": {
+      "name": "Hayden",
+      "password": "hayden",
+      "sessionActive": true
+    },
+    "rex@email.com": {
+      "name": "Rex",
+      "password": "sunxin",
+      "sessionActive": true
+    },
+    "rex@example.com": {
+      "name": "Rex",
+      "password": "123456",
+      "sessionActive": true
+    }
+  },
+  "quizzes": {
+    "453335097": {
+      "name": "First Quiz",
+      "owner": "hayden@example.com",
+      "questions": [
+        {
+          "id": 1,
+          "answersList": [],
+          "time": 0,
+          "question": "The first question",
+          "media": []
+        }
+      ],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2022-04-20T11:55:21.180Z"
+    },
+    "581363026": {
+      "name": "My First Quiz",
+      "owner": "rex@email.com",
+      "questions": [
+        {
+          "id": 1,
+          "answersList": [
+            {
+              "answerContext": "Hi",
+              "correct": false
+            },
+            {
+              "answerContext": "Hello",
+              "correct": true
+            }
+          ],
+          "time": 30,
+          "question": "The First Question",
+          "type": "Single Choice",
+          "media": [],
+          "points": 5
+        },
+        {
+          "id": 2,
+          "answersList": [
+            {
+              "answerContext": "Hi",
+              "correct": true
+            },
+            {
+              "answerContext": "Hello",
+              "correct": true
+            }
+          ],
+          "time": 20,
+          "question": "The Second Question",
+          "type": "Multiple Choice",
+          "media": [],
+          "points": 20
+        }
+      ],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2022-04-20T11:57:56.271Z"
+    },
+    "783979799": {
+      "name": "First Quiz",
+      "owner": "hayden@email.com",
+      "questions": [],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2022-04-20T11:54:59.199Z"
+    }
+  },
+  "sessions": {
+    "515374": {
+      "quizId": "783979799",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [],
+      "active": false,
+      "answerAvailable": false
+    },
+    "653024": {
+      "quizId": "581363026",
+      "position": 1,
+      "isoTimeLastQuestionStarted": "2022-04-20T12:00:42.985Z",
+      "players": {
+        "678860904": {
+          "name": "Rex",
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": 1,
+          "answersList": [
+            {
+              "answerContext": "Hi",
+              "correct": false
+            },
+            {
+              "answerContext": "Hello",
+              "correct": true
+            }
+          ],
+          "time": 30,
+          "question": "The First Question",
+          "type": "Single Choice",
+          "media": [],
+          "points": 5
+        },
+        {
+          "id": 2,
+          "answersList": [
+            {
+              "answerContext": "Hi",
+              "correct": true
+            },
+            {
+              "answerContext": "Hello",
+              "correct": true
+            }
+          ],
+          "time": 20,
+          "question": "The Second Question",
+          "type": "Multiple Choice",
+          "media": [],
+          "points": 20
+        }
+      ],
+      "active": false,
+      "answerAvailable": true
+    }
+  }
+}
