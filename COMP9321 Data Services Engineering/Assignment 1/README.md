@@ -126,12 +126,12 @@ You are required to use the following code template (it is not complete; please 
 - If your code does not run on CSE machines for any reasons (e.g., hard-coded file path such as C://Users/), you will be penalized at least by 5 marks. We assume that the csv files are located in the same directory of your script, and the name is the same as the one in the template (e.g., exposure.csv and Countires.csv)
 - Please look at the documentation for each question method; it describes the inputs (e.g., a dataframe) and output (e.g., dataframe, list of cities) of the method.
 
-    """ 
-    :param df7: the dataframe created in question 7 
-    :return: df8 
-            Data Type: Dataframe 
-            Please read the assignment specs to know how to create the output dataframe
-    """
+        """ 
+        :param df7: the dataframe created in question 7 
+        :return: df8 
+                Data Type: Dataframe 
+                Please read the assignment specs to know how to create the output dataframe
+        """
 
 - Please use the same variable names as mentioned in the comments
 - You are supposed to use Pandas library for all questions. That being said, it is forbidden to use regular python codes to process data. However, you can use lambda when required and user-defined functions for panda methods such as 'apply'.
