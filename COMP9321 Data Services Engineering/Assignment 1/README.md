@@ -119,9 +119,9 @@ You are required to use the following code template (it is not complete; please 
 - If you do not follow this structure, you will not be marked.
 - You can only add codes in the specified lines (do not edit the rest of the lines):
 
-    #################################################
-    # Your code goes here ...
-    #################################################
+        #################################################
+        # Your code goes here ...
+        #################################################
 
 - If your code does not run on CSE machines for any reasons (e.g., hard-coded file path such as C://Users/), you will be penalized at least by 5 marks. We assume that the csv files are located in the same directory of your script, and the name is the same as the one in the template (e.g., exposure.csv and Countires.csv)
 - Please look at the documentation for each question method; it describes the inputs (e.g., a dataframe) and output (e.g., dataframe, list of cities) of the method.
